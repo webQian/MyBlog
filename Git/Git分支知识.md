@@ -78,4 +78,26 @@ git stash apply stash@{o}
 git branch -D Feature分支
 ```
 应该使用大写的参数D来强制删除分支，因为该分支上的提交还没有合并
+# 八、标签
+为了替代不好辨识的Id，可以给一个分支添加一个id来进行标识
+```
+git tag <name> 可选的commit id
+```
+带说明的标签
+```
+git tag -a 标签名 -m "说明" commit id
+```
+获得说明
+```
+git show 标签名
+```
+删除标签
+```
+git tag -d 标签名
+```
+推送标签到远程
+```
+git push origin 标签名
+```
+给一个分支添加了标签后
 
