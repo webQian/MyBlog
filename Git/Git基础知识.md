@@ -60,6 +60,7 @@ ssh-keygen -t rsa -C "YourEmail"
 ```
 如果不需要设置密码，一路回车就好
 3.  登录Github，在settings中选择SSH and GPG keys，然后新建一个SSH key，输入key的名字，然后打开主目录，在.ssh文件夹下找到id_rsa.pub文件，复制其中的内容到Key文本域中，添加
+
 4.  如果是初次创建，使用
 ```
 ssh -T git@github.com
@@ -68,7 +69,7 @@ ssh -T git@github.com
 
 5.  创建仓库，在github中创建一个远程repository，创建成功后，在本地仓库中运行
 ```
-git remote add orgin git@github.com:YourGithubUsername/YourGithubRepository
+git remote add origin git@github.com:YourGithubUsername/YourGithubRepository
 ```
 6.  接下来就可以将你本地仓库中的文件提交到github上了
 ```
