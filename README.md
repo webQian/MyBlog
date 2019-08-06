@@ -1,6 +1,6 @@
 # 学习计划
 1. Git的基本命令和使用 :ballot_box_with_check:
-2. html
+2. html :ballot_box_with_check:
 3. css
 4. Javascript
 5. jquery
