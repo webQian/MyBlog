@@ -216,7 +216,7 @@ background-image:url('png') no-repeat center;
 
 # seo概念及相关优化
 
-# <!DOCTYPE html>的作用
+# !DOCTYPE html的作用
 
 # 标准模式和怪异模式
 
