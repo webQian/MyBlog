@@ -29,14 +29,14 @@
 
 # <span id = "basic">基础知识点</span>
 1. html中块级元素不会被嵌套进内联元素中，但是可以被嵌套在其他块级元素中
-2. 在<meta>标签中，keywords已经被废弃，因为作弊者填充了大量的Keywords，导致错误的引导了搜索引擎的搜索结果
+2. keywords已经被废弃，因为作弊者填充了大量的Keywords，导致错误的引导了搜索引擎的搜索结果
 3. 给网站设置主语言
 ```
 <html lang="zh">
 ```
 4. 在6个可用标题h1~h6中，每个页面的使用最好不要超过三个，h1一个页面应该只使用一次
 5. URL：统一资源定位符
-6. 文档锚点，在要跳转的元素上增加一个id属性，在a链接的href属性中使用#ID，给a元素增加download属性，代表下载资源，href属性中放要下载的资源路径
+6. 文档锚点，在要跳转的元素上增加一个id属性，在a链接的href属性中使用#ID。给a元素增加download属性，代表下载资源，href属性中放要下载的资源路径
 7. 电子邮件链接
 ```
 <a href="mailto:邮箱号?cc=抄送&bcc=密件抄送&subject=主题&body=主体">
@@ -53,6 +53,7 @@
 <blockquote>
 ```
 元素将其包裹起来，然后其cite属性指向引用的url，浏览器在渲染块引用时，会默认缩进
+
 如果是行内元素，则需要用
 ```
 <q>
@@ -62,12 +63,7 @@
 ```
 <abbr title="Hypetext Markup Language">HTML</abbr>
 ```
-11. 语义化的联系方式标签和时间标签
-```
-<address>
-<time datetime="2018-09-12">
-```
-12. 上标和下标
+11. 上标和下标
 ```
 <sup>  上标superscript
 <sub>  下标subscript
@@ -93,6 +89,10 @@
 <aside>：侧边栏
 
 <footer>：页脚
+  
+<address>：联系方式
+
+<time datetime="2018-09-12">：时间
   
 # <span id="media">多媒体相关</span>
 1. 背景图片的使用方式
@@ -158,12 +158,7 @@ src：路径
 
 sandbox：该属性在已经支持了其他属性并且更现代的浏览器中使用，可以提高安全性，沙盒化
 2. 为了提高网页加载速度，在网页加载后使用javascript来设置iframe元素的src属性，可以使页面更快的使用，减少页面的加载时间
-3. iframe的安全隐患：攻击向量
-
-单点劫持：将隐藏的iframe嵌入到文档中，并使用被隐藏的iframe来捕获用户交互，误导用户操作并获取敏感信息
-
-措施：在必要的时候才使用iframe、使用https减少远程内容在传输过程中被篡改的可能性，https防止嵌入式内容访问父文档的内容，反之亦然，在使用了https后，各大知名公司都会检测src路径、始终使用sandbox来进行沙盒化，默认情况下，应该使用没有参数的sandbox属性来强制执行所有可用的权限，如果真的需要，单独添加参数放开权限，但是不能同时使用allow-script和allow-same-origin属性，在这种情况下，嵌入式内容可以绕过阻止站点执行脚本的同源安全策略，并使用Javascript来关闭沙盒、配置SCP指令，提供一组HTTP标头，可以防止其他网站在其网页中嵌入您的内容
-4. 嵌入多种类型外部内容，像java applet、flash、svg、pdf、视频、图片，使用
+3. 嵌入多种类型外部内容，像java applet、flash、svg、pdf、视频、图片，使用
 ```
 <embed>和<object>
 ```
@@ -242,6 +237,11 @@ background-image:url('png') no-repeat center;
 3. SQL注入
 4. http数据头注入
 5. 电子邮件注入
+6. iframe的安全隐患：攻击向量
+
+单点劫持：将隐藏的iframe嵌入到文档中，并使用被隐藏的iframe来捕获用户交互，误导用户操作并获取敏感信息
+
+措施：在必要的时候才使用iframe、使用https减少远程内容在传输过程中被篡改的可能性，https防止嵌入式内容访问父文档的内容，反之亦然，在使用了https后，各大知名公司都会检测src路径、始终使用sandbox来进行沙盒化，默认情况下，应该使用没有参数的sandbox属性来强制执行所有可用的权限，如果真的需要，单独添加参数放开权限，但是不能同时使用allow-script和allow-same-origin属性，在这种情况下，嵌入式内容可以绕过阻止站点执行脚本的同源安全策略，并使用Javascript来关闭沙盒、配置SCP指令，提供一组HTTP标头，可以防止其他网站在其网页中嵌入您的内容
 
 # <span id="seo">seo概念及相关优化</span>
 
