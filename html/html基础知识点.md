@@ -1,5 +1,32 @@
 [基础知识点](#basic)
 
+[站点自定义图标](#icon)
+
+[语义化](#Semanticization)
+
+[多媒体](#media)
+
+[iframe相关](#iframe)
+
+[svg相关](#svg)
+
+[表格](#table)
+
+[表单](#form)
+
+[网站安全相关](#safe)
+
+[seo相关知识及优化](#seo)
+
+[!DOCTYPE html的作用](#DOCTYPE)
+
+[标准模式和怪异模式](#model)
+
+[ie浏览器](#ie)
+
+[同源策略](#source)
+
+
 # <span id = "basic">基础知识点</span>
 1. html中块级元素不会被嵌套进内联元素中，但是可以被嵌套在其他块级元素中
 2. 在<meta>标签中，keywords已经被废弃，因为作弊者填充了大量的Keywords，导致错误的引导了搜索引擎的搜索结果
@@ -45,12 +72,12 @@
 <sup>  上标superscript
 <sub>  下标subscript
 ```
-# 给网站增加自定义图标
+# <span id="icon">给网站增加自定义图标</span>
 ```
 <link rel="icon" type="image/x-icon" href="路径">
 ```
 给网站的自定义图片最好选用.icon 16像素的图片
-# 语义化标签
+# <span id="Semanticization">语义化标签</span>
 文档的基本组成部分：页眉、导航栏、主内容、侧边栏、页脚
 
 <header>：页眉，如果直接放在<body>元素下，则认为是整个网站的页眉，如果在一个区块中，则认为是该区块的标题
@@ -67,7 +94,7 @@
 
 <footer>：页脚
   
-# 多媒体相关
+# <span id="media">多媒体相关</span>
 1. 背景图片的使用方式
 如果图片的内容对网站有意义，应该使用html的方式，这样可以设置该元素的title和alt属性，如果对网站无意义，则应该使用css去设置
 2. 图片元素的语义容器，让图片和标题具有联系应该使用<figure>元素，将图片和内容具有联系，当然<figure>不仅仅可以包含图片
@@ -120,7 +147,7 @@ webVTT格式，简单来说字幕文件，使用时用<track>标签，将其放�
 ```
 在高于此宽度情况下，元素会内部会保持1200px，并处于可用空间的正中间，在小于此宽度的情况下，元素会占有视口宽度的100%
 
-# iframe相关
+# <span id="iframe">iframe相关</span>
 iframe将一个完整的html页面插入到页面中。
 1. 基本属性
 allowfullscreen：允许全屏模式
@@ -141,7 +168,7 @@ sandbox：该属性在已经支持了其他属性并且更现代的浏览器中�
 <embed>和<object>
 ```
 
-# svg
+# <span id="svg">svg</span>
 svg是描述矢量图形的xml语言
 优点：svg矢量中的文本仍然可以访问，有利于seo
 
@@ -175,7 +202,7 @@ background-image:url('png') no-repeat center;
 缺点：只适合在一个地方使用svg，多次使用将导致资源密集型维护，会额外增加html文件的大小，浏览器不能像缓存普通图片一样缓存svg，svg中可以增加回退，但是对于支持svg的浏览器来说，仍然会加载后备图片或文本，为了兼容旧浏览器而极大的增大了开销
 元数据meta标签和标准模式、怪异模式
 
-# 表格
+# <span id="table">表格</span>
 1. 要给表格每一列设置样式，使用
 ```
 <colgroup>
@@ -189,7 +216,7 @@ background-image:url('png') no-repeat center;
 ```
 3. thead和tfoot不论写在代码中的什么位置，都会出现在表格第一行和表格最后一行
 
-# 表单基础
+# <span id="form">表单基础</span>
 1. 写法
 ```
 <form>
@@ -209,20 +236,20 @@ background-image:url('png') no-repeat center;
 4. 上传文件时使用accept属性来限制用户上传文件的类型，必须使用post方法提交表单，将ecctype设置为multipart/form-data
 5. css:valid控制通过验证样式，css:invalid控制不通过样式，pattern设置正则表达式验证
 
-# 网站安全问题
+# <span id="safe">网站安全问题</span>
 1. XSS
 2. CSRF
 3. SQL注入
 4. http数据头注入
 5. 电子邮件注入
 
-# seo概念及相关优化
+# <span id="seo">seo概念及相关优化</span>
 
-# !DOCTYPE html的作用
+# <span id="DOCTYPE">!DOCTYPE html的作用</span>
 
-# 标准模式和怪异模式
+# <span id="model">标准模式和怪异模式</span>
 
-# ie浏览器下的不同之处
+# <span id="ie">ie浏览器下的不同之处</span>
 
-# 同源策略
+# <span id="source">同源策略</span>
 
