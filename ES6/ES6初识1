@@ -1,0 +1,46 @@
+# let和const
+1. let和const声明在指定作用域之外的作用域无法访问的变量
+2. let和const声明不会像var那样进行变量的提升
+3. let和const不能够同一作用域中重复声明变量
+4. const声明的常量，一旦设定后，不可以修改其绑定，但是可以修改它的值，也就是说const声明的常量必须进行初始化。当const声明的是一个对象时，它的值
+可以修改，但是绑定不能修改
+```
+const obj ={
+  a:1,
+  b:2,
+  c:"string"
+}
+//不能修改它的绑定
+obj = {
+  d:"new"
+}//报错
+
+//但是可以修改它的值
+obj.a = "hh"
+```
+5. 暂时性死区，在一个作用域中，不能在let和const声明变量之前去使用该变量
+6. 循环中的函数，对于forin也一样
+```
+var arr = [];
+for(var i=0;i<10;i++){
+    arr.push(function(){
+        console.log(i)
+    })
+}
+
+//创建i的副本
+for(var i =0;i<10;i++){
+    arr.push((function(value){
+        return function(){
+            console.log(value);
+        }
+    }(i)))
+}
+arr.forEach(function(fun){
+    fun()
+}) 
+```
+7. 当在循环中使用const时，会在第一次循环后报错，因为每次循环都会尝试修改它的值，但是在forin中却可以使用const声明，因为在forin循环中不是去修
+改值，而是创建一个新绑定
+8. 当使用var在全局作用域中声明一个全局变量时，该变量会成为全局对象的一个属性，这可能会导致无意中覆盖全局对象的某个属性，而使用let和const则不
+会成为全局对象的一个属性
